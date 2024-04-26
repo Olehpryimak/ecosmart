@@ -1,0 +1,360 @@
+:root {
+    --main-bg: #F7F7F6;
+    --main-text: #63638A;
+    --secondary-text: #0C0D34;
+    --thirdly-text: #FFFFFF;
+    --primary: #2E32D1;
+    --sm: 600;
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+            "slnt" 0;
+
+    background: var(--main-bg);
+    color: var(--main-text);
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-family: 'Satoshi', sans-serif;
+    color: var(--secondary-text);
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+h2 {
+    font-family: 'Satoshi', sans-serif;
+    color: var(--secondary-text);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+img {
+    max-width: 100%;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+}
+
+.header {
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: right;
+    padding: 80px 0;
+    background-color: var(--main-bg);
+}
+
+.header-wrapper {
+    margin: 0 24px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--main-text);
+}
+
+.menu li a:hover {
+    color: var(--primary);
+}
+
+.menu-btn {
+    display: none;
+    font-size: 18px;
+    padding: 4px 8px;
+    border: 1px solid var(--secondary-text);
+    border-radius: 2px;
+    background-color: transparent;
+    transition: background-color 0.05s ease-in, color 0.05s ease-in;
+}
+
+.menu-close {
+    display: none !important;
+}
+
+.menu-open {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-btn:hover {
+    background-color: var(--secondary-text);
+    color: var(--thirdly-text);
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    gap: 124px;
+    flex-direction: column;
+}
+
+.btn {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    padding: 14px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.05s ease-in;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+.btn--primary {
+    background-color: var(--primary);
+    color: var(--thirdly-text);
+}
+
+.btn:active {
+    opacity: 0.9;
+}
+
+.layout {
+    max-width: 1220px;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    margin: 0 auto;
+}
+
+@media screen and (width < 1500px) {
+    .layout {
+        max-width: 90%;
+    }
+}
+
+@media screen and (width < 600) {
+    h1, h2 {
+        font-size: 32px;
+    }
+    .layout {
+        max-width: 100%;
+        margin: 0 24px;
+    }
+    .content {
+        gap: 112px;
+    }
+}
+
+.solutions {
+    display: flex;
+    gap: 130px;
+    justify-content: space-between;
+}
+
+.solutions .solutions__info,
+.solutions .solutions__video {
+    flex: 50%;
+}
+
+.solutions__info {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.solutions__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.solutions-item__icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: var(--secondary-text);
+    margin-bottom: 26px;
+}
+
+.solutions-item__title {
+    font-family: 'Satoshi', sans-serif;
+    color: var(--secondary-text);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.35;
+    padding-bottom: 16px;
+}
+
+.solutions__video {
+    border-radius: 16px;
+    position: relative;
+}
+
+.solutions__video .solutions-image {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+.solutions-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--primary);
+    color: var(--thirdly-text);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    cursor: pointer;
+}
+
+.customers {
+    display: flex;
+    gap: 32px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.customers::-webkit-scrollbar {
+    display: none;
+}
+
+.customer-photo {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.customer-text,
+.customer-photo {
+    margin-bottom: 28px;
+}
+
+.customer-photo img {
+    height: 180px;
+    min-width: 360px;
+    width: 100%;
+    border-radius: inherit;
+}
+
+.footer {
+    background-color: #000000;
+    color: var(--thirdly-text);
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .menu {
+    flex-direction: column;
+}
+
+.footer .menu li a {
+    color: var(--thirdly-text);
+}
+
+.copyrights {
+    text-align: center;
+    align-self: flex-end;
+}
+
+.contacts {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.contacts-item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-10 {
+    margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+    .layout {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .header {
+        padding: 40px 0;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .menu-btn {
+        display: inline-flex;
+    }
+
+    .menu-close--open {
+        display: inline-flex !important;
+    }
+
+    .menu-open--close {
+        display: none !important;
+    }
+
+    .solutions {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .solutions-image {
+        max-height: 450px;
+    }
+
+    .list--vertical {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .copyrights,
+    .contacts {
+        text-align: left;
+        align-self: flex-start;
+    }
+}
